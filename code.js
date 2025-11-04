@@ -1,13 +1,12 @@
 const path = require("path");
 const lineReader = require("line-reader");
-
-const directory = "C:/Users/doumb/Downloads";
-const filePath = path.join(directory, "input.devtools");
-
-// -----------Part I---------------
+require("dotenv").config();
+const directory = process.env.DIRECTORY; //directory of data file
+const filePath = path.join(directory);
 
 //(*_*) Rules (*_*)//
 
+// function that check if a report is gradually increasing
 function ifIncrease(param) {
   for (let i = 0; i < param.length - 1; i++) {
     if (param[i] >= param[i + 1]) return false;
@@ -17,6 +16,8 @@ function ifIncrease(param) {
   }
   return true;
 }
+
+// function that check if a report is gradually decreasing
 
 function ifDecrease(param) {
   for (let i = 0; i < param.length - 1; i++) {
@@ -29,6 +30,8 @@ function ifDecrease(param) {
 }
 
 // Part 2 Rule
+// function that remove an element from a data and check first part rules on it
+
 function slicer(data) {
   //console.log(`original : ${data}`);
 
@@ -42,7 +45,7 @@ function slicer(data) {
   return false;
 }
 
-//(*_*) Cooking data (*_*)//
+//(*_*) retrieving data (*_*)//
 
 // Transform each line to table of string
 async function transformation(line) {
@@ -73,6 +76,7 @@ function readLines(filePath) {
   });
 }
 
+// Read the data file and give result of each part ( With and without Problem Dampener)
 async function readFile() {
   // console.log(` Reading file: ${filePath}`);
 
