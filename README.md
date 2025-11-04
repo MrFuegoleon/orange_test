@@ -24,7 +24,7 @@ Ce projet lit des rapports chiffrés ligne par ligne depuis un fichier `.devtool
 ```bash
 git clone https://github.com/MrFuegoleon/orange_test.git
 cd orange_test
-npm instal
+npm install
 
 ---
 ## Créer un fichier .env
