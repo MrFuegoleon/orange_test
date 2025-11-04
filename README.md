@@ -27,10 +27,6 @@ cd orange_test
 npm install
 
 ---
-## Créer un fichier .env
- 
-DIRECTORY="" // data file directory
----
 
 ## Lancer le script
 
