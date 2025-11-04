@@ -1,7 +1,7 @@
 const path = require("path");
 const lineReader = require("line-reader");
 require("dotenv").config();
-const directory = process.env.DIRECTORY; //directory of data file
+const directory = "./input.devtools"; //directory of data file
 const filePath = path.join(directory);
 
 //(*_*) Rules (*_*)//
